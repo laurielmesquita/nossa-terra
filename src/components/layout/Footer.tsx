@@ -1,0 +1,77 @@
+import Link from "next/link";
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-[#0F3D35] text-white pt-24 pb-12 border-t border-white/5 relative overflow-hidden">
+      {/* Subtle organic background glow */}
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-teal-600/10 rounded-full blur-[120px] translate-y-1/2 translate-x-1/2" />
+      
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
+          <div className="md:col-span-5 space-y-10">
+            <Link href="/" className="flex items-center gap-4 no-underline group outline-none">
+              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center overflow-hidden p-3 shadow-2xl shadow-black/20 transition-all group-hover:scale-105">
+                <img 
+                  src="/branding/logo-hd.png" 
+                  alt="Nossa Terra Imobiliária" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </Link>
+            <p className="text-white/50 text-xl font-medium leading-relaxed max-w-sm">
+              Consultoria estratégica especializada em ativos rurais no Norte do Piauí e Sul do Maranhão.
+            </p>
+            <div className="flex gap-6">
+              {["Instagram", "LinkedIn", "YouTube"].map((social) => (
+                <a key={social} href="#" className="text-white/30 hover:text-teal-400 transition-colors font-bold text-xs uppercase tracking-widest">{social}</a>
+              ))}
+            </div>
+          </div>
+
+          <div className="md:col-span-3 space-y-8">
+            <h4 className="text-teal-400 font-bold uppercase tracking-[0.3em] text-[10px]">Links Rápidos</h4>
+            <nav className="flex flex-col gap-6">
+              {[
+                { label: "Início", href: "/" },
+                { label: "Sobre", href: "/sobre" },
+                { label: "Contato", href: "/contato" },
+                { label: "Apresentação", href: "/apresentacao" },
+              ].map((link) => (
+                <Link key={link.label} href={link.href} className="text-white/70 hover:text-white transition-colors text-lg font-medium no-underline">
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div className="md:col-span-4 space-y-8">
+            <h4 className="text-teal-400 font-bold uppercase tracking-[0.3em] text-[10px]">Receba Oportunidades</h4>
+            <p className="text-white/50 font-medium">Inscreva-se para obter acesso prioritário a novos imóveis rurais.</p>
+            <div className="flex gap-3">
+              <input 
+                type="email" 
+                placeholder="Seu e-mail" 
+                className="flex-1 bg-white/5 border border-white/10 rounded-2xl px-6 outline-none focus:ring-1 focus:ring-teal-600 text-white font-medium"
+              />
+              <button className="bg-teal-600 hover:bg-teal-500 text-white px-6 py-4 rounded-xl font-bold transition-all active:scale-95 shadow-lg shadow-teal-600/20">
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="text-white/30 text-xs font-bold uppercase tracking-widest">
+            © {currentYear} Nossa Terra Imobiliária · Todos os direitos reservados.
+          </div>
+          <div className="flex gap-12 text-white/20 text-[10px] font-bold uppercase tracking-widest">
+            <a href="#" className="hover:text-white transition-colors">Privacidade</a>
+            <a href="#" className="hover:text-white transition-colors">Termos de Uso</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* === Nossa Terra Brand Tokens === */
+  --teal-darkest: #082821;
+  --teal-dark: #0f3d35;
+  --teal-mid: #14796b;
+  --teal-accent: #17a98b;
+  --teal-light: #e8f5f3;
+  --orange: #e8832a;
+  --orange-light: #fef3e8;
+  --earth: #8b6f47;
+  --earth-light: #f5f0e8;
+
+  /* === shadcn Semantic Variables (mapped to Nossa Terra) === */
+  --background: #f9fafb;
+  --foreground: #111827;
+  --card: #ffffff;
+  --card-foreground: #111827;
+  --popover: #ffffff;
+  --popover-foreground: #111827;
+  --primary: #0f3d35;
+  --primary-foreground: #ffffff;
+  --secondary: #e8f5f3;
+  --secondary-foreground: #0f3d35;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #17a98b;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #17a98b;
+
+  /* Nossa Terra extended */
+  --nt-orange: #e8832a;
+  --nt-orange-light: #fef3e8;
+  --nt-earth: #8b6f47;
+
+  --radius: 0.75rem;
+  --sidebar: #f9fafb;
+  --sidebar-foreground: #111827;
+  --sidebar-primary: #0f3d35;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e8f5f3;
+  --sidebar-accent-foreground: #0f3d35;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #17a98b;
+}
+
+@theme inline {
+  /* Core Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Nossa Terra Brand (safe Tailwind v4 tokens) */
+  --color-teal-darkest: var(--teal-darkest);
+  --color-teal-dark: var(--teal-dark);
+  --color-teal-mid: var(--teal-mid);
+  --color-teal-accent: var(--teal-accent);
+  --color-teal-light: var(--teal-light);
+  --color-nt-orange: var(--nt-orange);
+  --color-nt-orange-light: var(--nt-orange-light);
+  --color-nt-earth: var(--nt-earth);
+
+  /* Typography */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-heading: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* Sidebar */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Animations */
+  @keyframes ken-burns {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+}
+
+/* === Base Styles === */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: var(--teal-mid); border-radius: 3px; }
+
+/* Selection */
+::selection {
+  background: var(--teal-light);
+  color: var(--teal-dark);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}

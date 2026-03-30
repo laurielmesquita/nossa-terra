@@ -1,0 +1,134 @@
+import { Badge } from "@/components/ui/badge";
+
+export default function SobrePage() {
+  const whatsappBtnClass = "bg-accent hover:bg-teal-mid text-white rounded-2xl h-14 px-10 font-bold shadow-2xl shadow-accent/40 border-none transition-all hover:scale-105 flex items-center justify-center no-underline";
+
+  return (
+    <div className="bg-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-muted/20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <span className="text-xs font-bold tracking-[0.2em] uppercase text-accent block mb-6">
+              Sobre Nós
+            </span>
+            <h1 className="text-5xl md:text-6xl font-extrabold text-primary leading-[1.1] tracking-tight mb-8 font-serif">
+              Mais do que uma imobiliária. Uma <span className="text-teal-mid italic">consultoria estratégica</span> do seu negócio no campo.
+            </h1>
+            <p className="text-xl text-muted-foreground font-medium leading-relaxed">
+              Fundada para resolver a falta de segurança técnica e jurídica no mercado rural do Piauí e Maranhão.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* History Section */}
+      <section className="py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/10">
+              <img
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop&q=80"
+                alt="Campo Nossa Terra"
+                className="w-full h-[500px] object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+            </div>
+            <div>
+              <h2 className="text-3xl font-serif font-extrabold text-primary mb-6">A Nossa Terra nasceu de uma necessidade do mercado.</h2>
+              <div className="space-y-6 text-muted-foreground leading-relaxed text-lg font-medium">
+                <p>
+                  No mercado imobiliário rural comum, a venda termina na assinatura. Na Nossa Terra, a venda é apenas a etapa final de um processo rigoroso de análise.
+                </p>
+                <p>
+                  Percebemos que produtores e investidores perdiam tempo e dinheiro com terras sem documentação regular ou sem viabilidade técnica real. Unimos então o **Direito Agrário**, a **Engenharia de Solo** e o **Crédito Rural** em um único atendimento.
+                </p>
+                <div className="flex gap-4 pt-4">
+                  <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20 py-2 px-4 rounded-xl font-bold uppercase tracking-wider text-[10px]">
+                    + Segurança Jurídica
+                  </Badge>
+                  <Badge variant="secondary" className="bg-nt-orange-light text-nt-orange border-nt-orange/20 py-2 px-4 rounded-xl font-bold uppercase tracking-wider text-[10px]">
+                    + Viabilidade Técnica
+                  </Badge>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Aline Bio Section */}
+      <section id="aline" className="py-24 bg-primary text-white overflow-hidden relative">
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-accent/10 blur-[120px] rounded-full" />
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="order-2 lg:order-1">
+              <span className="text-xs font-bold tracking-[0.3em] uppercase text-accent block mb-8">
+                Quem Conduz
+              </span>
+              <h2 className="text-4xl md:text-5xl font-serif font-extrabold leading-tight mb-8">
+                Aline Nascimento
+                <br />
+                <span className="text-white/60 text-2xl font-bold uppercase tracking-widest mt-2 block italic">Corretora & Advogada</span>
+              </h2>
+              <div className="space-y-8 text-white/70 leading-relaxed text-lg font-medium">
+                <div className="border-l-4 border-accent pl-8 py-2">
+                  <p className="italic text-xl text-white font-serif">
+                    &quot;Minha formação em Direito não é apenas um título, é a ferramenta que protege o patrimônio dos meus clientes em cada contrato.&quot;
+                  </p>
+                </div>
+                <p>
+                  Com especialização em **Direito Agrário, Imobiliário e Civil**, Aline Nascimento construiu a Nossa Terra baseada no princípio da transparência radical. 
+                </p>
+                <p>
+                  Seu atendimento é direto e consultivo. Se a terra não tem viabilidade ou se o risco jurídico é alto, o cliente é avisado antes de qualquer investimento. 
+                </p>
+                <div className="pt-8">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=5586999279390&text=Olá!%20Assisti%20seu%20teaser%20e%20gostaria%20de%20falar%20com%20você."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={whatsappBtnClass}
+                  >
+                    Falar com a Aline
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 lg:order-2 relative group">
+              <div className="absolute -inset-4 bg-accent/20 rounded-[3rem] blur-2xl group-hover:bg-accent/30 transition-all duration-700" />
+              <div className="border-none bg-white rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80"
+                  alt="Aline Nascimento"
+                  className="w-full h-[600px] object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values/Pillars Recap */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center mb-16">
+          <h2 className="text-4xl font-serif font-extrabold text-primary mb-4">Nossa entrega em cada hectare.</h2>
+          <div className="w-20 h-1.5 bg-accent mx-auto rounded-full" />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+          {[
+            { title: "Transparência", desc: "Laudos técnicos reais. Se a terra não produz, nós avisamos.", icon: "💎" },
+            { title: "Rigor Jurídico", desc: "Análise profunda de toda a cadeia dominial antes da oferta.", icon: "⚖️" },
+            { title: "Foco no Resultado", desc: "Buscamos terras que tragam produtividade ou valorização real.", icon: "📈" },
+          ].map((v) => (
+            <div key={v.title} className="text-center group">
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{v.icon}</div>
+              <h3 className="text-2xl font-serif font-extrabold text-primary mb-3">{v.title}</h3>
+              <p className="text-muted-foreground leading-relaxed font-medium">{v.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
