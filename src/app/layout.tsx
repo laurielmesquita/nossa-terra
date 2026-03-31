@@ -43,7 +43,7 @@ export const viewport: Viewport = {
   themeColor: "#0f3d35",
 };
 
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function RootLayout({
   children,
