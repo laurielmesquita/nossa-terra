@@ -25,7 +25,7 @@ const pillars = [
     ),
     title: "Jurídico",
     subtitle: "Blindagem de Ativos",
-    desc: "Análise dominial profunda conduzida por advogada especialista. Zero risco jurídico.",
+    desc: "Análise dominial profunda conduzida por perita especialista em inteligência documental. Zero risco jurídico.",
     tag: "Exclusive",
     variant: "dark",
   },

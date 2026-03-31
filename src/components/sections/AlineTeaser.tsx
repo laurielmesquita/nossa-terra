@@ -27,16 +27,14 @@ export default function AlineTeaser() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D35]/60 via-transparent to-transparent opacity-80" />
                   
                   {/* Floating Authoritative Badges */}
-                  <div className="absolute top-8 left-8 flex flex-col gap-3">
                     <div className="bg-white/20 backdrop-blur-xl border border-white/30 text-white px-5 py-2 rounded-2xl text-[10px] font-bold uppercase tracking-[0.2em] shadow-xl">
-                      ⚖️ Jurídico Especializado
+                      🛡️ Inteligência Documental
                     </div>
-                  </div>
                   
                   <div className="absolute bottom-10 left-10 right-10">
                     <div className="bg-white/95 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-white/50">
                       <div className="text-[#0F3D35] font-serif font-extrabold text-2xl mb-1">Aline Nascimento</div>
-                      <div className="text-teal-600 text-xs font-bold uppercase tracking-widest">Fundadora · Corretora · Advogada</div>
+                      <div className="text-teal-600 text-xs font-bold uppercase tracking-widest">Fundadora · Corretora · Perita Judiciária</div>
                     </div>
                   </div>
                 </div>
@@ -51,20 +49,20 @@ export default function AlineTeaser() {
                 Autoridade em Campo
               </Badge>
               <h2 className="text-4xl md:text-6xl font-serif font-extrabold text-[#0F3D35] leading-[1.15] mb-8">
-                Deixe quem entende de <span className="text-teal-600 italic">terra</span> e <span className="text-teal-800 italic">leis</span> cuidar do seu patrimônio.
+                Deixe quem entende de <span className="text-teal-600 italic">terra</span> e <span className="text-teal-800 italic">legislação</span> cuidar do seu patrimônio.
               </h2>
               <div className="w-24 h-1.5 bg-teal-600 rounded-full mb-10" />
             </div>
 
             <div className="space-y-8">
               <p className="text-xl text-gray-500 leading-relaxed font-medium max-w-2xl">
-                Aline Nascimento traz o rigor técnico que transações complexas de campo exigem. Com formação jurídica sólida, ela garante que cada hectare negociado tenha segurança total.
+                Aline Nascimento traz o rigor técnico que transações complexas de campo exigem. Com profundo domínio técnico e pericial, ela garante que cada hectare negociado tenha segurança total.
               </p>
               
               <div className="bg-gray-50 p-8 rounded-[2rem] border-l-8 border-teal-600 relative overflow-hidden group hover:bg-gray-100 transition-colors duration-500">
-                <div className="absolute -right-8 -top-8 text-9xl text-teal-600/5 font-serif select-none">"</div>
+                <div className="absolute -right-8 -top-8 text-9xl text-teal-600/5 font-serif select-none">&quot;</div>
                 <p className="text-lg text-[#0F3D35] leading-relaxed font-serif italic relative z-10">
-                  "Minha missão na Nossa Terra é transformar a aquisição rural em um processo transparente, técnico e juridicamente blindado. O cliente investe no que produz, não em problemas."
+                  &quot;Minha missão na Nossa Terra é transformar a aquisição rural em um processo transparente, técnico e juridicamente blindado. O cliente investe no que produz, não em problemas.&quot;
                 </p>
               </div>
             </div>

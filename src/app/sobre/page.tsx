@@ -69,16 +69,16 @@ export default function SobrePage() {
               <h2 className="text-4xl md:text-5xl font-serif font-extrabold leading-tight mb-8">
                 Aline Nascimento
                 <br />
-                <span className="text-white/60 text-2xl font-bold uppercase tracking-widest mt-2 block italic">Corretora & Advogada</span>
+                <span className="text-white/60 text-2xl font-bold uppercase tracking-widest mt-2 block italic">Corretora & Perita Judiciária</span>
               </h2>
               <div className="space-y-8 text-white/70 leading-relaxed text-lg font-medium">
                 <div className="border-l-4 border-accent pl-8 py-2">
                   <p className="italic text-xl text-white font-serif">
-                    &quot;Minha formação em Direito não é apenas um título, é a ferramenta que protege o patrimônio dos meus clientes em cada contrato.&quot;
+                    &quot;Minha expertise técnica e pericial não é apenas um diferencial, é a ferramenta que protege o patrimônio dos meus clientes em cada transação.&quot;
                   </p>
                 </div>
                 <p>
-                  Com especialização em **Direito Agrário, Imobiliário e Civil**, Aline Nascimento construiu a Nossa Terra baseada no princípio da transparência radical. 
+                  Com vasta experiência em **Legislação Agrária, Imobiliária e Civil**, Aline Nascimento construiu a Nossa Terra baseada no princípio da transparência radical e segurança documental. 
                 </p>
                 <p>
                   Seu atendimento é direto e consultivo. Se a terra não tem viabilidade ou se o risco jurídico é alto, o cliente é avisado antes de qualquer investimento. 

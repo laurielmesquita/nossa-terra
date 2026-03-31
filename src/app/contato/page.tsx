@@ -101,12 +101,12 @@ export default function ContatoPage() {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.123456789!2d-42.7938!3d-5.1182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78f936173456789%3A0x1234567890abcdef!2sRua+Professor+Diniz%2C+1199+-+Lourival+Parente%2C+Teresina+-+PI!5e0!3m2!1spt-BR!2sbr!4v1711577000000!5m2!1spt-BR!2sbr"
-                    style={{ border: 0 } as any}
+                    style={{ border: 0 } as React.CSSProperties}
                   />
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest">✓ CRECI Ativa</Badge>
-                  <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest">✓ OAB Ativa</Badge>
+                  <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest">✓ Perita Registral</Badge>
                 </div>
               </div>
             </div>
