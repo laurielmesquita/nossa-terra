@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import Image from "next/image";
 
 const mockProperties = [
   {
@@ -56,9 +57,10 @@ export default function ComingSoonSection() {
               className="group rounded-[2.5rem] overflow-hidden border-none bg-muted/20 hover:bg-white hover:shadow-[0_40px_80px_-15px_rgba(15,61,53,0.12)] transition-all duration-700"
             >
               <div className="relative h-72 overflow-hidden">
-                <img
+                <Image
                   src={`${prop.img}?w=800&auto=format&fit=crop&q=75`}
                   alt={prop.type}
+                  fill
                   className="w-full h-full object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-60" />
@@ -86,31 +88,43 @@ export default function ComingSoonSection() {
           ))}
         </div>
 
-        {/* Subscription Box - CLEAN version */}
-        <div className="bg-primary rounded-[3.5rem] p-12 md:p-20 flex flex-col lg:flex-row items-center justify-between gap-12 border border-white/5 relative overflow-hidden shadow-2xl shadow-primary/30">
-          <div className="absolute -top-32 -right-32 w-96 h-96 bg-accent/20 rounded-full blur-[120px]" />
-          <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-nt-orange/10 rounded-full blur-[100px]" />
+        {/* Subscription Box - PREMIUM version */}
+        <div className="bg-primary rounded-[3.5rem] p-12 md:p-24 flex flex-col lg:flex-row items-center justify-between gap-16 border border-white/10 relative overflow-hidden shadow-[0_50px_100px_-20px_rgba(15,61,53,0.5)]">
+          <div className="absolute -top-32 -right-32 w-96 h-96 bg-accent/30 rounded-full blur-[140px]" />
+          <div className="absolute -bottom-32 -left-32 w-80 h-80 bg-nt-orange/15 rounded-full blur-[120px]" />
           
-          <div className="text-center lg:text-left relative z-10 max-w-xl">
-            <h3 className="text-3xl md:text-4xl font-serif font-extrabold text-white mb-4">
-              Receba Alertas de Oportunidades.
+          <div className="text-center lg:text-left relative z-10 max-w-2xl">
+            <Badge className="bg-accent/20 text-accent border-accent/30 px-4 py-1 rounded-full mb-6 text-[10px] font-bold uppercase tracking-widest">
+              Acesso Exclusivo
+            </Badge>
+            <h3 className="text-4xl md:text-5xl font-serif font-extrabold text-white mb-6 leading-tight">
+              Oportunidades que não chegam ao <span className="text-accent italic">mercado aberto.</span>
             </h3>
-            <p className="text-white/60 text-lg font-medium">
-              Seja o primeiro a saber quando novas propriedades entrarem no catálogo.
+            <p className="text-white/60 text-xl font-medium leading-relaxed">
+              Assine nossa curadoria estratégica e seja notificado sobre propriedades em regime de confidencialidade.
             </p>
           </div>
           
-          <div className="w-full max-w-md relative z-10 flex flex-col sm:flex-row gap-4">
-            <input
-              type="email"
-              placeholder="Seu e-mail"
-              className="h-16 flex-1 bg-white/10 border border-white/20 backdrop-blur-md rounded-2xl px-8 focus:ring-accent outline-none text-white text-lg placeholder:text-white/40 shadow-inner"
-            />
-            <button
-              className="h-16 bg-accent hover:bg-white hover:text-primary text-white px-10 rounded-2xl font-bold text-lg shadow-2xl shadow-accent/20 transition-all duration-300 active:scale-95"
-            >
-              Inscrever-me
-            </button>
+          <div className="w-full max-w-lg relative z-10">
+            <form className="flex flex-col sm:flex-row gap-4 group" onSubmit={(e) => e.preventDefault()}>
+              <div className="relative flex-1">
+                <input
+                  type="email"
+                  placeholder="Seu melhor e-mail"
+                  className="w-full h-20 bg-white/5 border border-white/10 backdrop-blur-2xl rounded-[2rem] px-10 focus:ring-2 focus:ring-accent/50 outline-none text-white text-lg placeholder:text-white/30 transition-all duration-300"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="h-20 bg-accent hover:bg-white hover:text-primary text-white px-12 rounded-[2rem] font-extrabold text-lg shadow-2xl shadow-accent/20 transition-all duration-500 active:scale-95 whitespace-nowrap"
+              >
+                Garantir Acesso
+              </button>
+            </form>
+            <p className="text-white/30 text-[10px] uppercase tracking-widest font-bold mt-6 text-center lg:text-left">
+              Privacidade absoluta. Sem spam.
+            </p>
           </div>
         </div>
       </div>

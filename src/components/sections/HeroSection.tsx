@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 
 const buttonClass = "w-full sm:w-auto bg-[#17A98B] hover:bg-white hover:text-[#0F3D35] text-white rounded-2xl h-20 px-12 text-xl font-extrabold shadow-2xl shadow-teal-600/40 transition-all duration-500 hover:scale-105 flex items-center justify-center no-underline";
 const outlineClass = "w-full sm:w-auto bg-white/5 hover:bg-white/10 border border-white/20 text-white rounded-2xl h-20 px-12 text-xl font-bold backdrop-blur-md transition-all duration-500 hover:scale-105 flex items-center justify-center no-underline";
@@ -24,10 +25,12 @@ export default function HeroSection() {
             src="https://joy1.videvo.net/videvo_files/video/free/2015-08/large_watermarked/Corn_Fields_Slow_3_videvo_preview.mp4" 
             type="video/mp4" 
           />
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1800&q=80"
             alt="Propriedade rural"
+            fill
             className="w-full h-full object-cover"
+            priority
           />
         </video>
         
@@ -48,7 +51,7 @@ export default function HeroSection() {
         </div>
 
         {/* Cinematic Headline */}
-        <h1 className="font-serif font-extrabold text-5xl md:text-7xl lg:text-9xl leading-[1.0] tracking-tight mb-10 max-w-7xl mx-auto drop-shadow-2xl">
+        <h1 className="font-serif font-extrabold text-5xl md:text-7xl lg:text-9xl leading-[1.0] tracking-tight mb-10 max-w-screen-2xl mx-auto drop-shadow-2xl">
           Segurança Jurídica, <br />
           <span className="text-[#17A98B] italic">Análise Técnica</span> <br />
           e Crédito Rural.
@@ -76,7 +79,7 @@ export default function HeroSection() {
         </div>
 
         {/* Stats Strip */}
-        <div className="mt-28 grid grid-cols-2 md:grid-cols-4 gap-12 max-w-7xl w-full border-t border-white/10 pt-14 opacity-80">
+        <div className="mt-28 grid grid-cols-2 md:grid-cols-4 gap-12 max-w-screen-2xl w-full border-t border-white/10 pt-14 opacity-80">
           {[
             { value: "2021", label: "No Mercado" },
             { value: "100%", label: "Segurança" },

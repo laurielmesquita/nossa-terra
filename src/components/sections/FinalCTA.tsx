@@ -19,7 +19,7 @@ export default function FinalCTA() {
               Conversa inicial sem compromisso
             </div>
 
-            <h2 className="text-5xl md:text-7xl lg:text-9xl font-serif font-extrabold leading-[1] max-w-7xl mx-auto tracking-tight">
+            <h2 className="text-5xl md:text-7xl lg:text-9xl font-serif font-extrabold leading-[1] max-w-screen-2xl mx-auto tracking-tight">
               A sua terra, <br />
               <span className="text-accent italic">blindada.</span>
             </h2>
