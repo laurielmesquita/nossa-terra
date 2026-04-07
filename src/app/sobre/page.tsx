@@ -7,16 +7,16 @@ export default function SobrePage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-muted/20">
+      <section className="pt-32 pb-20 bg-muted/20 overflow-hidden">
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-8">
           <div className="max-w-5xl">
-            <span className="text-xs font-bold tracking-[0.2em] uppercase text-accent block mb-6">
+            <span className="text-xs font-bold tracking-[0.2em] uppercase text-accent block mb-6 opacity-0 animate-fade-in-up">
               Sobre Nós
             </span>
-            <h1 className="text-5xl md:text-6xl font-extrabold text-primary leading-[1.1] tracking-tight mb-8 font-serif">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-primary leading-[1.1] tracking-tight mb-8 font-serif opacity-0 animate-fade-in-up stagger-1">
               Mais do que uma imobiliária. Uma <span className="text-teal-mid italic">consultoria estratégica</span> do seu negócio no campo.
             </h1>
-            <p className="text-xl text-muted-foreground font-medium leading-relaxed">
+            <p className="text-xl text-muted-foreground font-medium leading-relaxed opacity-0 animate-fade-in-up stagger-2">
               Fundada para resolver a falta de segurança técnica e jurídica no mercado rural do Piauí e Maranhão.
             </p>
           </div>
@@ -27,7 +27,7 @@ export default function SobrePage() {
       <section className="py-24">
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/10 h-[500px]">
+            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/10 h-[500px] opacity-0 animate-fade-in-up stagger-1">
               <Image
                 src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop&q=80"
                 alt="Campo Nossa Terra"
@@ -36,7 +36,7 @@ export default function SobrePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
             </div>
-            <div>
+            <div className="opacity-0 animate-fade-in-up stagger-2">
               <h2 className="text-3xl font-serif font-extrabold text-primary mb-6">A Nossa Terra nasceu de uma necessidade do mercado.</h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed text-lg font-medium">
                 <p>
@@ -64,7 +64,7 @@ export default function SobrePage() {
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-accent/10 blur-[120px] rounded-full" />
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1 opacity-0 animate-fade-in-up stagger-2">
               <span className="text-xs font-bold tracking-[0.3em] uppercase text-accent block mb-8">
                 Quem Conduz
               </span>
@@ -82,9 +82,6 @@ export default function SobrePage() {
                 <p>
                   Com vasta experiência em **Legislação Agrária, Imobiliária e Civil**, Aline Nascimento construiu a Nossa Terra baseada no princípio da transparência radical e segurança documental. 
                 </p>
-                <p>
-                  Seu atendimento é direto e consultivo. Se a terra não tem viabilidade ou se o risco jurídico é alto, o cliente é avisado antes de qualquer investimento. 
-                </p>
                 <div className="pt-8">
                   <a
                     href="https://api.whatsapp.com/send?phone=5586999279390&text=Olá!%20Assisti%20seu%20teaser%20e%20gostaria%20de%20falar%20com%20você."
@@ -97,7 +94,7 @@ export default function SobrePage() {
                 </div>
               </div>
             </div>
-            <div className="order-1 lg:order-2 relative group">
+            <div className="order-1 lg:order-2 relative group opacity-0 animate-fade-in-up stagger-1">
               <div className="absolute -inset-4 bg-accent/20 rounded-[3rem] blur-2xl group-hover:bg-accent/30 transition-all duration-700" />
               <div className="border-none bg-white rounded-[3rem] overflow-hidden shadow-2xl relative z-10 h-[600px]">
                 <Image
@@ -113,8 +110,8 @@ export default function SobrePage() {
       </section>
 
       {/* Values/Pillars Recap */}
-      <section className="py-24 bg-white">
-        <div className="max-w-screen-2xl mx-auto px-6 lg:px-8 text-center mb-16">
+      <section className="py-24 bg-white overflow-hidden">
+        <div className="max-w-screen-2xl mx-auto px-6 lg:px-8 text-center mb-16 opacity-0 animate-fade-in-up">
           <h2 className="text-4xl font-serif font-extrabold text-primary mb-4">Nossa entrega em cada hectare.</h2>
           <div className="w-20 h-1.5 bg-accent mx-auto rounded-full" />
         </div>
@@ -123,8 +120,8 @@ export default function SobrePage() {
             { title: "Transparência", desc: "Laudos técnicos reais. Se a terra não produz, nós avisamos.", icon: "💎" },
             { title: "Rigor Jurídico", desc: "Análise profunda de toda a cadeia dominial antes da oferta.", icon: "⚖️" },
             { title: "Foco no Resultado", desc: "Buscamos terras que tragam produtividade ou valorização real.", icon: "📈" },
-          ].map((v) => (
-            <div key={v.title} className="text-center group">
+          ].map((v, i) => (
+            <div key={v.title} className={`text-center group opacity-0 animate-fade-in-up stagger-${i+1}`}>
               <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{v.icon}</div>
               <h3 className="text-2xl font-serif font-extrabold text-primary mb-3">{v.title}</h3>
               <p className="text-muted-foreground leading-relaxed font-medium">{v.desc}</p>

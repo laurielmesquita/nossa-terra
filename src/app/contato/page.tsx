@@ -52,16 +52,16 @@ export default function ContatoPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* Header section */}
-      <section className="pt-32 pb-16 bg-muted/20">
+      <section className="pt-32 pb-16 bg-muted/20 overflow-hidden">
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl">
-            <span className="text-xs font-bold tracking-[0.2em] uppercase text-accent block mb-6">
+            <span className="text-xs font-bold tracking-[0.2em] uppercase text-accent block mb-6 opacity-0 animate-fade-in-up">
               Contato
             </span>
-            <h1 className="text-5xl md:text-6xl font-serif font-extrabold text-primary leading-[1.1] tracking-tight mb-8">
+            <h1 className="text-5xl md:text-6xl font-serif font-extrabold text-primary leading-[1.1] tracking-tight mb-8 opacity-0 animate-fade-in-up stagger-1">
               Vamos conversar sobre o seu <span className="text-teal-mid italic">próximo passo no campo?</span>
             </h1>
-            <p className="text-xl text-muted-foreground font-medium leading-relaxed">
+            <p className="text-xl text-muted-foreground font-medium leading-relaxed opacity-0 animate-fade-in-up stagger-2">
               O atendimento na Nossa Terra é pessoal e consultivo. Aline Nascimento conduzirá sua jornada pessoalmente.
             </p>
           </div>
@@ -74,7 +74,7 @@ export default function ContatoPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             
             {/* Contact channels & Info */}
-            <div className="lg:col-span-5 space-y-8">
+            <div className="lg:col-span-5 space-y-8 opacity-0 animate-fade-in-up stagger-1">
               <div className="space-y-6">
                 <h2 className="text-3xl font-serif font-extrabold text-primary">Canais Diretos</h2>
                 <div className="grid grid-cols-1 gap-4">
@@ -137,7 +137,7 @@ export default function ContatoPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 opacity-0 animate-fade-in-up stagger-2">
               <div className="rounded-[3.5rem] bg-white border border-muted/50 shadow-[0_50px_100px_-20px_rgba(15,61,53,0.08)] p-10 md:p-16 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full blur-3xl" />
                 
