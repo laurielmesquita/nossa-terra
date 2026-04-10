@@ -12,7 +12,7 @@ export default function SobrePage() {
         {/* Relevant Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&auto=format&fit=crop&q=80"
+            src="/assets/images/hero-sobre.png"
             alt="Vastidão Rural"
             fill
             priority

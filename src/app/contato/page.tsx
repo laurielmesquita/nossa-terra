@@ -58,7 +58,7 @@ export default function ContatoPage() {
         {/* Relevant Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1454165833767-1330084bc6f9?w=1600&auto=format&fit=crop&q=80"
+            src="/assets/images/hero-contato.png"
             alt="Atendimento Consultivo"
             fill
             priority
