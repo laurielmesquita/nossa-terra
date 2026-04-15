@@ -54,7 +54,7 @@ export default function SobrePage() {
                   No mercado imobiliário rural comum, a venda termina na assinatura. Na Nossa Terra, a venda é apenas a etapa final de um processo rigoroso de análise.
                 </p>
                 <p>
-                  Percebemos que produtores e investidores perdiam tempo e dinheiro com terras sem documentação regular ou sem viabilidade técnica real. Unimos então o **Direito Agrário**, a **Engenharia de Solo** e o **Crédito Rural** em um único atendimento.
+                  Percebemos que produtores e investidores perdiam tempo e dinheiro com terras sem documentação regular ou sem viabilidade técnica real. Unimos então o <strong>Direito Agrário</strong>, a <strong>Engenharia de Solo</strong> e o <strong>Crédito Rural</strong> em um único atendimento.
                 </p>
                 <div className="flex gap-4 pt-4">
                   <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20 py-2 px-4 rounded-xl font-bold uppercase tracking-wider text-[10px]">
@@ -91,7 +91,7 @@ export default function SobrePage() {
                   </p>
                 </div>
                 <p>
-                  Com vasta experiência em **Legislação Agrária, Imobiliária e Civil**, Aline Nascimento construiu a Nossa Terra baseada no princípio da transparência radical e segurança documental. 
+                  Com vasta experiência em <strong>Legislação Agrária, Imobiliária e Civil</strong>, Aline Nascimento construiu a Nossa Terra baseada no princípio da transparência radical e segurança documental. 
                 </p>
                 <div className="pt-8">
                   <a

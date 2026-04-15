@@ -17,14 +17,67 @@ const profileOptions = [
 
 export default function ContatoPage() {
   const [form, setForm] = useState({ name: "", phone: "", email: "", profile: "", message: "" });
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  const applyPhoneMask = (value: string) => {
+    const rawValue = value.replace(/\D/g, "");
+    if (rawValue.length <= 10) {
+      return rawValue
+        .replace(/(\d{2})(\d)/, "($1) $2")
+        .replace(/(\d{4})(\d)/, "$1-$2");
+    }
+    return rawValue
+      .replace(/(\d{2})(\d)/, "($1) $2")
+      .replace(/(\d{5})(\d)/, "$1-$2")
+      .substring(0, 15);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    let finalValue = value;
+
+    if (name === "phone") {
+      finalValue = applyPhoneMask(value);
+    }
+
+    setForm((prev) => ({ ...prev, [name]: finalValue }));
+    // Clear error for the field being edited
+    if (errors[name]) {
+      setErrors((prev) => {
+        const newErrors = { ...prev };
+        delete newErrors[name];
+        return newErrors;
+      });
+    }
+  };
+
+  const validate = () => {
+    const newErrors: Record<string, string> = {};
+    if (!form.name.trim()) newErrors.name = "O nome é obrigatório";
+    
+    const phoneDigits = form.phone.replace(/\D/g, "");
+    if (!phoneDigits) {
+      newErrors.phone = "O WhatsApp é obrigatório";
+    } else if (phoneDigits.length < 10) {
+      newErrors.phone = "Número incompleto";
+    }
+
+    if (!form.profile) newErrors.profile = "Selecione seu perfil";
+
+    if (form.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      newErrors.email = "E-mail inválido";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!validate()) return;
+
     setLoading(true);
     
     // Simulate background processing
@@ -181,16 +234,18 @@ export default function ContatoPage() {
                         <Input 
                           name="name" required value={form.name} onChange={handleChange} 
                           placeholder="Seu nome" 
-                          className="h-16 bg-muted/30 border-none rounded-2xl px-8 focus:ring-accent/20 font-medium text-lg placeholder:text-muted-foreground/40"
+                          className={`h-16 bg-muted/30 border-none rounded-2xl px-8 focus:ring-accent/20 font-medium text-lg placeholder:text-muted-foreground/40 ${errors.name ? 'ring-2 ring-red-500/50' : ''}`}
                         />
+                        {errors.name && <p className="text-red-500 text-xs font-bold ml-2 animate-in fade-in slide-in-from-top-1">{errors.name}</p>}
                       </div>
                       <div className="space-y-3">
                         <label className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-primary/40 ml-1">WhatsApp</label>
                         <Input 
-                          name="phone" required value={form.phone} onChange={handleChange} 
+                          name="phone" value={form.phone} onChange={handleChange} 
                           placeholder="(86) 99927-9390" 
-                          className="h-16 bg-muted/30 border-none rounded-2xl px-8 focus:ring-accent/20 font-medium text-lg placeholder:text-muted-foreground/40"
+                          className={`h-16 bg-muted/30 border-none rounded-2xl px-8 focus:ring-accent/20 font-medium text-lg placeholder:text-muted-foreground/40 ${errors.phone ? 'ring-2 ring-red-500/50' : ''}`}
                         />
+                        {errors.phone && <p className="text-red-500 text-xs font-bold ml-2 animate-in fade-in slide-in-from-top-1">{errors.phone}</p>}
                       </div>
                     </div>
 
@@ -199,16 +254,17 @@ export default function ContatoPage() {
                       <Input 
                         type="email" name="email" value={form.email} onChange={handleChange} 
                         placeholder="seu@e-mail.com" 
-                        className="h-16 bg-muted/30 border-none rounded-2xl px-8 focus:ring-accent/20 font-medium text-lg placeholder:text-muted-foreground/40"
+                        className={`h-16 bg-muted/30 border-none rounded-2xl px-8 focus:ring-accent/20 font-medium text-lg placeholder:text-muted-foreground/40 ${errors.email ? 'ring-2 ring-red-500/50' : ''}`}
                       />
+                      {errors.email && <p className="text-red-500 text-xs font-bold ml-2 animate-in fade-in slide-in-from-top-1">{errors.email}</p>}
                     </div>
 
                     <div className="space-y-3">
                       <label className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-primary/40 ml-1">Seu Perfil</label>
                       <div className="relative">
                         <select 
-                          name="profile" required value={form.profile} onChange={handleChange}
-                          className="w-full h-16 bg-muted/30 border-none rounded-2xl px-8 outline-none focus:ring-2 focus:ring-accent/20 text-primary font-medium text-lg appearance-none cursor-pointer"
+                          name="profile" value={form.profile} onChange={handleChange}
+                          className={`w-full h-16 bg-muted/30 border-none rounded-2xl px-8 outline-none focus:ring-2 focus:ring-accent/20 text-primary font-medium text-lg appearance-none cursor-pointer ${errors.profile ? 'ring-2 ring-red-500/50' : ''}`}
                         >
                           <option value="" disabled>Selecione seu perfil...</option>
                           {profileOptions.map((o) => (
@@ -217,6 +273,7 @@ export default function ContatoPage() {
                         </select>
                         <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-primary/30">▼</div>
                       </div>
+                      {errors.profile && <p className="text-red-500 text-xs font-bold ml-2 mt-2 animate-in fade-in slide-in-from-top-1">{errors.profile}</p>}
                     </div>
 
                     <div className="space-y-3">
