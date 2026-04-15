@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
+import { ShieldCheck, Scale, TrendingUp } from "lucide-react";
 
 export default function SobrePage() {
   const whatsappBtnClass = "bg-accent hover:bg-teal-mid text-white rounded-2xl h-14 px-10 font-bold shadow-2xl shadow-accent/40 border-none transition-all hover:scale-105 flex items-center justify-center no-underline";
@@ -128,12 +129,14 @@ export default function SobrePage() {
         </div>
         <div className="max-w-screen-2xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
           {[
-            { title: "Transparência", desc: "Laudos técnicos reais. Se a terra não produz, nós avisamos.", icon: "💎" },
-            { title: "Rigor Jurídico", desc: "Análise profunda de toda a cadeia dominial antes da oferta.", icon: "⚖️" },
-            { title: "Foco no Resultado", desc: "Buscamos terras que tragam produtividade ou valorização real.", icon: "📈" },
+            { title: "Transparência", desc: "Laudos técnicos reais. Se a terra não produz, nós avisamos.", icon: <ShieldCheck className="w-8 h-8" /> },
+            { title: "Rigor Jurídico", desc: "Análise profunda de toda a cadeia dominial antes da oferta.", icon: <Scale className="w-8 h-8" /> },
+            { title: "Foco no Resultado", desc: "Buscamos terras que tragam produtividade ou valorização real.", icon: <TrendingUp className="w-8 h-8" /> },
           ].map((v, i) => (
-            <div key={v.title} className={`text-center group opacity-0 animate-fade-in-up stagger-${i+1}`}>
-              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{v.icon}</div>
+            <div key={v.title} className={`text-center flex flex-col items-center group opacity-0 animate-fade-in-up stagger-${i+1}`}>
+              <div className="w-20 h-20 rounded-full bg-accent/5 flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-inner">
+                {v.icon}
+              </div>
               <h3 className="text-2xl font-serif font-extrabold text-primary mb-3">{v.title}</h3>
               <p className="text-muted-foreground leading-relaxed font-medium">{v.desc}</p>
             </div>

@@ -7,12 +7,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Breadcrumb } from "@/components/shared/Breadcrumb";
+import { MapPin, ChevronDown, Check, Sprout, Home, Tractor, MessageSquare } from "lucide-react";
 
 const profileOptions = [
-  { value: "comprador", label: "🌾 Comprador / Investidor" },
-  { value: "vendedor", label: "🏡 Proprietário / Vendedor" },
-  { value: "produtor", label: "🚜 Produtor Rural" },
-  { value: "outros", label: "💬 Outro" },
+  { value: "comprador", label: "Comprador / Investidor" },
+  { value: "vendedor", label: "Proprietário / Vendedor" },
+  { value: "produtor", label: "Produtor Rural" },
+  { value: "outros", label: "Outro" },
 ];
 
 export default function ContatoPage() {
@@ -165,8 +166,8 @@ export default function ContatoPage() {
                     rel="noopener noreferrer"
                     className="p-8 rounded-[2.5rem] bg-muted/30 border border-muted/50 flex items-center gap-6 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group no-underline"
                   >
-                    <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-2xl shadow-inner group-hover:scale-110 transition-transform">
-                      📍
+                    <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-primary shadow-inner group-hover:scale-110 transition-transform">
+                      <MapPin className="w-6 h-6" />
                     </div>
                     <div>
                       <div className="font-extrabold text-lg text-primary font-serif leading-tight">Rua Professor Diniz, 1199</div>
@@ -195,8 +196,8 @@ export default function ContatoPage() {
                   />
                 </div>
                 <div className="flex flex-wrap gap-3">
-                  <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest">✓ CRECI Ativa</Badge>
-                  <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest">✓ Perita Registral</Badge>
+                  <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest flex items-center gap-2"><Check className="w-3 h-3" /> CRECI Ativa</Badge>
+                  <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5 px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest flex items-center gap-2"><Check className="w-3 h-3" /> Perita Registral</Badge>
                 </div>
               </div>
             </div>
@@ -215,8 +216,8 @@ export default function ContatoPage() {
                 
                 {sent ? (
                   <div className="flex flex-col items-center justify-center text-center py-12 animate-in fade-in zoom-in duration-500">
-                    <div className="w-24 h-24 rounded-full bg-accent text-white flex items-center justify-center text-4xl mb-8 shadow-xl shadow-accent/20">
-                      ✓
+                    <div className="w-24 h-24 rounded-full bg-accent text-white flex items-center justify-center mb-8 shadow-xl shadow-accent/20">
+                      <Check className="w-12 h-12" />
                     </div>
                     <h3 className="text-3xl font-serif font-extrabold text-primary mb-4">Mensagem Recebida!</h3>
                     <p className="text-muted-foreground mb-12 max-w-sm text-lg font-medium leading-relaxed">
@@ -271,7 +272,9 @@ export default function ContatoPage() {
                             <option key={o.value} value={o.value}>{o.label}</option>
                           ))}
                         </select>
-                        <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-primary/30">▼</div>
+                        <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none text-primary/30">
+                          <ChevronDown className="w-5 h-5" />
+                        </div>
                       </div>
                       {errors.profile && <p className="text-red-500 text-xs font-bold ml-2 mt-2 animate-in fade-in slide-in-from-top-1">{errors.profile}</p>}
                     </div>

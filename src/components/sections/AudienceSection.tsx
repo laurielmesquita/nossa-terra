@@ -1,23 +1,24 @@
 import { Badge } from "@/components/ui/badge";
+import { Sprout, Home, Tractor } from "lucide-react";
 
 const audience = [
   {
     title: "Compradores & Investidores",
     desc: "Busca por terras de alta produtividade ou valorização com blindagem jurídica total.",
     features: ["Chain of Title Analysis", "Soil Viability Report", "Tax Optimization"],
-    icon: "🌾",
+    icon: <Sprout className="w-8 h-8" />,
   },
   {
     title: "Proprietários & Vendedores",
     desc: "Venda profissional de ativos rurais com avaliação técnica e regularização completa.",
     features: ["Technical Asset Valuation", "Legal Regularization", "Qualified Network"],
-    icon: "🏡",
+    icon: <Home className="w-8 h-8" />,
   },
   {
     title: "Produtores em Expansão",
     desc: "Arrendamento ou compra de áreas vizinhas com análise de bacia hídrica e logística.",
     features: ["Logistics Analysis", "Water Resource Audit", "Crop History Study"],
-    icon: "🚜",
+    icon: <Tractor className="w-8 h-8" />,
   },
 ];
 
@@ -47,7 +48,9 @@ export default function AudienceSection() {
               key={i}
               className="bg-white rounded-[3rem] p-12 shadow-[0_40px_80px_-15px_rgba(15,61,53,0.06)] border border-gray-100 flex flex-col hover:shadow-2xl hover:shadow-teal-900/10 transition-all duration-700 hover:-translate-y-2 group"
             >
-              <div className="text-6xl mb-10 group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
+              <div className="w-20 h-20 rounded-2xl bg-primary/5 flex items-center justify-center text-primary mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner">
+                {item.icon}
+              </div>
               <h3 className="text-2xl font-serif font-extrabold text-[#0F3D35] mb-6">{item.title}</h3>
               <p className="text-gray-500 mb-10 leading-relaxed font-medium">{item.desc}</p>
               

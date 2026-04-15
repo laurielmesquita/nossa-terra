@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
+import { ShieldCheck } from "lucide-react";
 
 export default function AlineTeaser() {
   const primaryBtnClass = "bg-[#0F3D35] hover:bg-teal-900 text-white rounded-2xl h-16 px-10 text-lg font-bold shadow-2xl shadow-[#0F3D35]/20 border-none transition-all duration-700 hover:-translate-y-1 flex items-center justify-center no-underline";
@@ -29,9 +30,11 @@ export default function AlineTeaser() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F3D35]/60 via-transparent to-transparent opacity-80" />
                   
                   {/* Floating Authoritative Badges */}
-                    <div className="bg-white/20 backdrop-blur-xl border border-white/30 text-white px-5 py-2 rounded-2xl text-[10px] font-bold uppercase tracking-[0.2em] shadow-xl">
-                      🛡️ Inteligência Documental
+                  <div className="absolute top-10 left-10 animate-bounce-slow">
+                    <div className="bg-white/20 backdrop-blur-xl border border-white/30 text-white px-5 py-2 rounded-2xl text-[10px] font-bold uppercase tracking-[0.2em] shadow-xl flex items-center gap-2">
+                      <ShieldCheck className="w-4 h-4 text-accent" /> Inteligência Documental
                     </div>
+                  </div>
                   
                   <div className="absolute bottom-10 left-10 right-10">
                     <div className="bg-white/95 backdrop-blur-md p-6 rounded-3xl shadow-2xl border border-white/50">
