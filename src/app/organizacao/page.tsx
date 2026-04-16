@@ -43,8 +43,8 @@ export default function OrganizacaoPage() {
           <div className="lg:col-span-7 flex flex-col justify-center">
             <div className="flex items-center gap-4 mb-10">
               <div className="text-white font-serif text-3xl font-bold tracking-tight">Nossa Terra</div>
-              <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-              <div className="text-accent text-[10px] font-bold tracking-[0.3em] uppercase">Google Drive</div>
+              <div className="w-1.5 h-1.5 rounded-full bg-accent translate-y-[4px]" />
+              <div className="text-accent text-[10px] font-bold tracking-[0.3em] uppercase translate-y-[4px]">Google Drive</div>
             </div>
 
             <div className="text-accent text-[10px] font-bold tracking-[0.4em] uppercase mb-6 flex items-center gap-3">
