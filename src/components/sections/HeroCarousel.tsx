@@ -101,7 +101,7 @@ export default function HeroCarousel() {
           </div>
         ),
         bg: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1800&q=80",
-        video: "https://joy1.videvo.net/videvo_files/video/free/2015-08/large_watermarked/Corn_Fields_Slow_3_videvo_preview.mp4"
+        video: "https://cdn.coverr.co/videos/coverr-horses-on-a-misty-farm-5500/1080p.mp4"
       }
   ];
 
