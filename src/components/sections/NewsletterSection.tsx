@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function NewsletterSection() {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white pt-24 pb-0">
       <div className="max-w-screen-2xl mx-auto px-6 lg:px-8">
         <div className="bg-primary rounded-[3.5rem] p-12 md:p-24 flex flex-col lg:flex-row items-center justify-between gap-16 border border-white/10 relative overflow-hidden shadow-[0_50px_100px_-20px_rgba(15,61,53,0.5)]">
           <div className="absolute -top-32 -right-32 w-96 h-96 bg-accent/30 rounded-full blur-[140px]" />
